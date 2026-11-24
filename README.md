@@ -14,7 +14,7 @@ Celem projektu było zbudowanie od podstaw środowiska laboratoryjnego SOC w cel
 ### Scenariusz 1: Wykrywanie ukrytych poleceń PowerShell (`-EncodedCommand`) i dekodowanie
 * **Symulacja:** Uruchomienie ukrytego procesu PowerShell z komendą zakodowaną w Base64 (`MITRE T1059.001`).
 * **Detekcja i analiza:** Przechwycenie pełnej linii poleceń (`commandLine`) oraz drzewa procesów (`parentImage`) dzięki integracji **Sysmon (Event ID 1)** z Wazuh. Odkodowanie ładunku w **CyberChef** - `whoami; hostname`.
-  ![](Projekt/wykrywanie_power_shell/sysmon(log).png)
+  ![](Projekt/wykrywanie%20power%20shell%20sysmon(log).png)
 
 ### Scenariusz 2: Monitorowanie integralności plików 
 * **Symulacja:** Podrzucenie, modyfikacja i usunięcie pliku `okup.txt` w monitorowanym katalogu `C:\Bank`.
