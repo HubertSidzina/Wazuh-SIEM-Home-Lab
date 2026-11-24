@@ -19,13 +19,13 @@ Celem projektu było zbudowanie od podstaw środowiska laboratoryjnego SOC w cel
 ### Scenariusz 2: Monitorowanie integralności plików 
 * **Symulacja:** Podrzucenie, modyfikacja i usunięcie pliku `okup.txt` w monitorowanym katalogu `C:\Bank`.
 * **Detekcja:** Konfiguracja modułu `syscheck` w trybie `realtime="yes"`, rejestrująca w czasie zmiany plików oraz konto użytkownika wykonującego operację.
-![]()
+![](Projekt/file%20editing/CommandLine(Sysmon).png)
 
 ### Scenariusz 3: Wykrywanie ataku Brute-Force i automatyczna blokada (Active Response)
 * **Symulacja:** Przeprowadzenie serii nieudanych logowań sieciowych z zewnętrznego hosta (`Event ID 4625`).
 * **Reakcja (SOAR):** Konfiguracja mechanizmu **Active Response** (`route-null.exe`) podpiętego pod regułę `60122` (*Multiple Windows Logon Failures*), automatycznie odcinającego adres IP atakującego na 600 sekund.
-![]()
+![](Projekt/brute-force/brute-force.png)
 
 ## 4. Własny Dashboard analityczny
 Zbudowano dedykowany widok w Wazuh Dashboard prezentujący licznik incydentów krytycznych (`rule.level >= 10`), rozkład taktyk według matrycy **MITRE ATT&CK** oraz zestawienie najczęstszych alertów.
-![]()
+![](Projekt/Dashboard%20(Summary).png)
