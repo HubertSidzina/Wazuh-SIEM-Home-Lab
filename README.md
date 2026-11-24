@@ -27,5 +27,5 @@ Celem projektu było zbudowanie od podstaw środowiska laboratoryjnego SOC w cel
 ![](Projekt/brute-force/brute-force.png)
 
 ## 4. Własny Dashboard analityczny
-Zbudowano dedykowany widok w Wazuh Dashboard prezentujący licznik incydentów krytycznych (`rule.level >= 10`), rozkład taktyk według matrycy **MITRE ATT&CK** oraz zestawienie najczęstszych alertów.
+Zbudowano dedykowany widok w Wazuh Dashboard prezentujący licznik incydentów krytycznych (`rule.level >= 10`) oraz zestawienie najczęstszych alertów.
 ![](Projekt/Dashboard%20(Summary).png)
