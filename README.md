@@ -14,7 +14,7 @@ Celem projektu było zbudowanie od podstaw środowiska laboratoryjnego SOC w cel
 ### Scenariusz 1: Wykrywanie ukrytych poleceń PowerShell (`-EncodedCommand`) i dekodowanie
 * **Symulacja:** Uruchomienie ukrytego procesu PowerShell z komendą zakodowaną w Base64 (`MITRE T1059.001`).
 * **Detekcja i analiza:** Przechwycenie pełnej linii poleceń (`commandLine`) oraz drzewa procesów (`parentImage`) dzięki integracji **Sysmon (Event ID 1)** z Wazuh. Odkodowanie ładunku w **CyberChef** (Base64 + UTF-16LE) do jawnej postaci `whoami; hostname`.
-  Projekt/reconnaissance/reconnaissance.png)
+  (Projekt/reconnaissance/reconnaissance.png)
 
 ### Scenariusz 2: Własna reguła korelacji XML – skanowanie aplikacji WWW (`FakeBank`)
 * **Symulacja:** Postawienie lokalnego serwera HTTP (Python) oraz przeprowadzenie automatycznego skanowania ukrytych podstron (generowanie serii błędów HTTP `404`).
