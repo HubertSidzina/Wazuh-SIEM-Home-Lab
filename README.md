@@ -13,7 +13,7 @@ The goal of this project was to build a functional SOC lab environment from scra
 
 ### Case Study 1: Detecting Obfuscated PowerShell (`-EncodedCommand`) & Decoding
 * **Simulation:** Executed a hidden PowerShell process with a Base64-encoded command (`MITRE T1059.001`).
-* **Detection & Analysis:** Captured the full command line (`commandLine`) and process tree (`parentImage`) via **Sysmon (Event ID 1)** integrated with Wazuh. Decoded the payload in **CyberChef** revealing `whoami; hostname`.
+* **Detection & Analysis:** Captured the full command line (`commandLine`) and process tree (`parentImage`) via Sysmon integrated with Wazuh. Decoded the payload in **CyberChef** revealing `whoami; hostname`.
 
 ![](Project/wykrywanie_power_shell/sysmon%20(log).png)
 
