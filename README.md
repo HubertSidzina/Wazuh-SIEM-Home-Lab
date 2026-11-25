@@ -15,7 +15,7 @@ The goal of this project was to build a functional SOC lab environment from scra
 * **Simulation:** Executed a hidden PowerShell process with a Base64-encoded command (`MITRE T1059.001`).
 * **Detection & Analysis:** Captured the full command line (`commandLine`) and process tree (`parentImage`) via **Sysmon (Event ID 1)** integrated with Wazuh. Decoded the payload in **CyberChef** revealing `whoami; hostname`.
 
-![](https://github.com)
+![](Project/wykrywanie_power_shell/sysmon%20(log).png)
 
 ---
 
@@ -23,7 +23,7 @@ The goal of this project was to build a functional SOC lab environment from scra
 * **Simulation:** Created, modified, and deleted a ransom note file (`okup.txt`) inside the monitored directory `C:\Bank`.
 * **Detection:** Configured the `syscheck` module in `realtime="yes"` mode, capturing file changes and the user account performing the operations in real time.
 
-![](https://github.com)
+![](Project/file_editing/CommandLine(Sysmon).png)
 
 ---
 
@@ -31,11 +31,11 @@ The goal of this project was to build a functional SOC lab environment from scra
 * **Simulation:** Conducted multiple failed network logon attempts from an external host (`Event ID 4625`).
 * **Response (SOAR):** Configured **Active Response** (`route-null.exe`) triggered by `Rule ID 60122` (*Multiple Windows Logon Failures*), automatically blocking the attacker's IP address for 600 seconds.
 
-![](https://github.com)
+![](Project/brute_force/brute-force.png)
 
 ---
 
 ## 3. Custom SOC Analytical Dashboard
 Built a dedicated view in **Wazuh Dashboard** displaying a counter of high-severity incidents (`rule.level >= 10`) and a breakdown of top triggered alerts.
 
-![](https://github.com)
+![](Project/Dashboard%20(Summary).png)
